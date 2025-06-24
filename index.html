@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog CEO API Viewer</title>
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🐕 Dog CEO API Viewer</h1>
+            <p>Explore beautiful dog images from around the world</p>
+        </div>
+
+        <div class="controls">
+            <div class="control-row">
+                <input
+                    type="text"
+                    class="search-input"
+                    id="searchInput"
+                    placeholder="Search dog breeds... (e.g., labrador, golden, bulldog)"
+                >
+                <select class="breed-select" id="breedSelect">
+                    <option value="">All Breeds</option>
+                </select>
+            </div>
+            <div class="control-row">
+                <button class="btn btn-primary" id="loadDogsBtn">
+                    🔄 Load New Dogs
+                </button>
+                <button class="btn btn-secondary" id="loadBreedsBtn">
+                    📋 Refresh Breeds
+                </button>
+                <button class="btn btn-secondary" id="clearBtn">
+                    🗑️ Clear Results
+                </button>
+            </div>
+        </div>
+
+        <div class="stats" id="stats" style="display: none;">
+            <span id="totalCount">Total Dogs: 0</span>
+            <span id="filteredCount">Showing: 0</span>
+            <span id="selectedBreed">All Breeds</span>
+        </div>
+
+        <div id="loading" class="loading" style="display: none;">
+            <div class="spinner"></div>
+            <p>Fetching adorable dogs...</p>
+        </div>
+
+        <div id="errorMessage" class="error" style="display: none;"></div>
+
+        <div class="gallery" id="gallery"></div>
+
+        <div id="noResults" class="no-results" style="display: none;">
+            <h3>🔍 No dogs found</h3>
+            <p>Try adjusting your search or select a different breed</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+</html>
